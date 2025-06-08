@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 import { useRouter } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useAuthStore } from '@/store/useAuthStore';
@@ -55,13 +55,6 @@ export default function WelcomeScreen() {
             size="large"
             style={styles.button}
           />
-          
-          <TouchableOpacity
-            style={styles.adminLink}
-            onPress={() => router.push('/(auth)/admin-login')}
-          >
-            <Text style={[styles.adminLinkText, textStyles.textSecondary3D]}>Вход для администратора</Text>
-          </TouchableOpacity>
         </View>
       </View>
     </View>
@@ -126,12 +119,5 @@ const styles = StyleSheet.create({
   button: {
     width: '100%',
     marginBottom: 16,
-  },
-  adminLink: {
-    marginTop: 16,
-    padding: 8,
-  },
-  adminLinkText: {
-    fontSize: 14,
   },
 });
